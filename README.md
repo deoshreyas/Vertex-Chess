@@ -11,7 +11,7 @@ Currently, the engine does not support the Universal Chess Interface (UCI) proto
 You can use the Web GUI [here](https://deoshreyas.github.io/Vertex-Chess/)! I ported the C/C++ code to Web Assembly, and used Web Workers to make this! It supports four time controls - Bullet (1 min | 5 sec), Blitz (5 min | 10 sec), Rapid (10 min | 15 sec) and Classical (30 min)! You can also set a predetermined time to spend per move for the engine (**highly recommended** - I have very little faith in my ability to code proper time management!). If you are feeling brave, you can set it to 0 and play!
 
 <div style="text-align: center">
-    <img src="https://raw.githubusercontent.com/deoshreyas/Vertex-Chess/refs/heads/main/Demo/WebUI_Demo.gif">
+    <img src="https://raw.githubusercontent.com/deoshreyas/Vertex-Chess/refs/heads/main/Demo/WebUI_Demo.gif" width="50%">
 </div>
 
 2. **Python GUI _(recommended for people looking for more control)_:**
@@ -25,7 +25,7 @@ pip install pygame
 You can do this in a Virtual Environment if you want! The GUI folder comes with a precompiled DLL already, so you don't have to do it yourself!
 
 <div style="text-align: center">
-    <img src="https://raw.githubusercontent.com/deoshreyas/Vertex-Chess/refs/heads/main/Demo/PythonGUI_Demo.gif">
+    <img src="https://raw.githubusercontent.com/deoshreyas/Vertex-Chess/refs/heads/main/Demo/PythonGUI_Demo.gif" width="50%">
 </div>
 
 3 **Build from source:**
