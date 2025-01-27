@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Vertex Engine Playground</title>
+    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css" integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Vertex-Favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div id="options">
+        <div class="form-container">
+            <div class="form-field">
+                <h2>Settings</h2>
+                <label for="time-control">Time Control</label>
+                <select name="time-control" id="time-control">
+                    <option value="classical">Classical</option>
+                    <option value="bullet">Bullet</option>
+                    <option value="blitz">Blitz</option>
+                    <option value="rapid">Rapid</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label for="time-per-move">Time Per Move (seconds)</label>
+                <input type="number" name="time-per-move" id="time-per-move" value="5">
+            </div>
+            <div class="form-field">
+                <label for="playing-as">Playing As</label>
+                <select name="playing-as" id="playing-as">
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="random">Random</option>
+                </select>
+            </div>
+            <div class="form-button">
+                <button type="submit" id="start-match">Start Match</button>
+            </div>
+        </div>
+    </div> 
+
+    <div id="engine" class="hidden">
+        <div id="game-time-control">
+            <span id="white-time">3:00</span>
+            <span id="black-time">3:00</span>
+        </div>
+        <div id="board"></div>
+        <button id="export-pgn">Copy PGN</button>
+        <button id="undo-move">Undo</button>
+    </div>
+
+    <div id="game-result" class="hidden">
+        <h2 id="game-over-reason"></h2>
+        <h3 id="winner"></h3>
+        <button id="close-popup">Okay</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js" integrity="sha512-xRllwz2gdZciIB+AkEbeq+gVhX8VB8XsfqeFbUh+SzHlN96dEduwtTuVuc2u9EROlmW9+yhRlxjif66ORpsgVA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js" integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD" crossorigin="anonymous"></script>
+    <script src="chess_engine.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

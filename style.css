@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --font: 'Monsterrat', 'Helvetica', sans-serif;
+    --col-primary: #000;
+    --col-secondary: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    background-color: var(--col-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.form-container {
+    box-sizing: border-box;
+    padding: 1.5rem;
+    max-width: 400px;
+    width: 90vw;
+    border: 0.5em solid var(--col-secondary);
+    border-radius: 1em;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: var(--col-secondary);
+}
+
+.form-field {
+    margin-bottom: 1.25rem;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    color: var(--col-secondary);
+}
+
+.form-field select, .form-field input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 0.25em solid var(--col-secondary);
+    border-radius: 0.25em;
+    font-size: 1rem;
+    background-color: transparent;
+    color: var(--col-secondary);
+}
+
+.form-field select option {
+    color: var(--col-primary);
+}
+
+.form-field select:focus, .form-field input:focus {
+    outline: none;
+}
+
+.form-field input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    width: 91%;
+}
+
+.form-field input[type="number"]::-webkit-inner-spin-button, .form-field input[type="number"]::-webkit-outer-spin-button {
+    display: none;
+}
+
+.form-button {
+    text-align: center;
+    width: 100%;
+}
+
+.form-button button {
+    background: var(--col-secondary);
+    color: var(--col-primary);
+    padding: 0.75rem 1.5rem;
+    border: 0.25em solid var(--col-secondary);
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 0.25em;
+    font-weight: bold;
+}
+
+.form-button button:hover {
+    background: transparent;
+    color: var(--col-secondary);
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 1.5rem;
+    }
+
+    .form-container input[type="number"] {
+        width: 88%;
+    }
+
+    .form-field h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#board {
+    width: 400px;
+    touch-action: none;
+}
+
+@media (max-width: 480px) {
+    #board {
+        width: 300px;
+    }
+}
+
+@media (max-width: 320px) {
+    #board {
+        width: 250px;
+    }
+}
+
+#game-time-control {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+    color: var(--col-secondary);
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: var(--font);
+    text-align: center;
+}
+
+#game-time-control #white-time {
+    background-color: var(--col-secondary);
+    border: 0.05em solid var(--col-secondary);
+    color: var(--col-primary);
+    padding: 0 1rem;
+}
+
+#game-time-control #black-time {
+    background-color: var(--col-primary);
+    border: 0.05em solid var(--col-secondary);
+    color: var(--col-secondary);
+    padding: 0 1rem;
+}
+
+#engine button {
+    font-size: 1rem;
+    margin-top: 1em;
+    border: 0.15em solid var(--col-secondary);
+    border-radius: 0.25em;
+    color: var(--col-primary);
+}
+
+#engine button:hover {
+    background-color: var(--col-primary);
+    border-color: var(--col-secondary);
+    color: var(--col-secondary);
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    #game-time-control {
+        font-size: 1.5rem;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #game-time-control #white-time, #time-control #black-time {
+        padding: 0 0.5rem;
+    }
+}
+
+#game-result {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--col-secondary);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    font-size: 1.5rem;
+    z-index: 100;
+    min-width: 200px;
+    border: 0.25em solid var(--col-primary);
+    text-align: center;
+    box-shadow: 0 10px 0.5em 0.25em rgba(0, 0, 0, 0.25);
+}
+
+#game-result h2 {
+    margin: 0;
+    margin-bottom: 0.25em;
+}
+
+#game-result h3 {
+    font-weight: 100;
+    margin: 0;
+}
+
+#game-result button {
+    margin-top: 1em;
+    padding: 0.15em;
+    width: 100%;
+    color: var(--col-secondary);
+    background-color: var(--col-primary);
+    border: 0.25em solid var(--col-primary);
+    font-size: 1.15rem;
+}
+
+#game-result button:hover {
+    cursor: pointer;
+    background-color: var(--col-secondary);
+    color: var(--col-primary);
+}
